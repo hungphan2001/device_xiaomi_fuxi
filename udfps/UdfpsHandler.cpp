@@ -112,11 +112,13 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             if (!enrolling) {
                 setFodStatus(FOD_STATUS_OFF);
             }
-        } else if (vendorCode == 20 || vendorCode == 22) {
-            /*
-             * vendorCode = 20 waiting for fingerprint authentication
-             * vendorCode = 22 waiting for fingerprint enroll
-             */
+        }
+        /* vendorCode
+         * 21: waiting for finger
+         * 22: finger down
+         * 23: finger up
+         */
+        if (vendorCode == 21) {
             setFodStatus(FOD_STATUS_ON);
         }
     }
