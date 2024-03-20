@@ -240,7 +240,7 @@ DEVICE_MANIFEST_KALAMA_FILES := \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xiaomi.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/cherish/config/device_framework_matrix.xml
 
 # Vibrator
 $(call soong_config_set, XIAOMI_VIBRATOR, USE_EFFECT_STREAM, true)
